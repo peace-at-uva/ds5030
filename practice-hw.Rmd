@@ -1,0 +1,63 @@
+---
+title: "DS5030 Practice HW"
+author: "Peace Gwam"
+date: "2026-01-15"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+# Question 1
+
+Scatterplot of fuel efficiency (or miles per gallon) and horsepower of cars in the "mtcars" dataset. Fuel efficiency is inversely correlated with horsepower. 
+
+## Part A
+```{r 1a, echo=TRUE, fig.align='center'}
+ggplot(data=mtcars,aes(x=hp,y=mpg))+
+  geom_point()+
+  labs(
+    title = "Fuel Efficiency and Horsepower of Select Cars",
+    x = "Horsepower",
+    y = "Fuel Efficency (mpg)"
+  )
+```
+## Part B
+```{r 1b, echo=FALSE, fig.align='center'}
+ggplot(data=mtcars,aes(x=hp,y=mpg))+
+  geom_point()+
+  labs(
+    title = "Fuel Efficiency and Horsepower of Select Cars",
+    x = "Horsepower",
+    y = "Fuel Efficency (mpg)"
+  )
+```
+## Part C
+```{r 1c, echo=TRUE}
+mtcars <- mtcars %>% 
+  mutate(hp_low_high = case_when(
+    hp < 200 ~ "low",
+    hp >= 200 ~ "high"))
+
+mtcars %>% 
+  select(mpg, hp, hp_low_high) 
+```
+
+
+  
+## Part D
+```{r 1d, echo=TRUE}
+mtcars %>% 
+  group_by(hp_low_high) %>% 
+  summarize(avg_hp = mean(hp))
+```
+
+
+# Question 2
+
+My dream car is a high speed train. I don't like to drive, but I like to get where I need to go quickly. I wish the United States had more high speed trains.
+
+```{r fig1, echo=FALSE, fig.align='center'}
+knitr::include_graphics("treno-francese-TVG-768x498.jpg")
