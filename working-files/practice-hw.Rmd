@@ -7,9 +7,7 @@ knit: |
   (function(inputFile, encoding) {
     out_dir <- file.path(dirname(inputFile), "..", "hw-delivery")
     if (!dir.exists(out_dir)) dir.create(out_dir, recursive = TRUE)
-    rmarkdown::render(inputFile,
-                      encoding = encoding,
-                      output_dir = out_dir)
+    rmarkdown::render(inputFile, encoding = encoding, output_dir = out_dir)
   })
 ---
 

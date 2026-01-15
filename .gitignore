@@ -4,6 +4,5 @@
 .Ruserdata
 .Rproj.user/
 *.Rproj.user
-*.pdf
 *_files/
-*.jpg
+
