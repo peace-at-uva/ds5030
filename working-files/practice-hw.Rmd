@@ -3,6 +3,14 @@ title: "DS5030 Practice HW"
 author: "Peace Gwam"
 date: "2026-01-15"
 output: pdf_document
+knit: |
+  (function(inputFile, encoding) {
+    out_dir <- file.path(dirname(inputFile), "..", "hw-delivery")
+    if (!dir.exists(out_dir)) dir.create(out_dir, recursive = TRUE)
+    rmarkdown::render(inputFile,
+                      encoding = encoding,
+                      output_dir = out_dir)
+  })
 ---
 
 ```{r setup, include=FALSE}
@@ -12,9 +20,8 @@ library(tidyverse)
 
 # Question 1
 
-Scatterplot of fuel efficiency (or miles per gallon) and horsepower of cars in the "mtcars" dataset. Fuel efficiency is inversely correlated with horsepower. 
-
 ## Part A
+Scatterplot of fuel efficiency (or miles per gallon) and horsepower of cars in the "mtcars" dataset. Fuel efficiency is inversely correlated with horsepower. 
 ```{r 1a, echo=TRUE, fig.align='center'}
 ggplot(data=mtcars,aes(x=hp,y=mpg))+
   geom_point()+
@@ -61,3 +68,4 @@ My dream car is a high speed train. I don't like to drive, but I like to get whe
 
 ```{r fig1, echo=FALSE, fig.align='center'}
 knitr::include_graphics("treno-francese-TVG-768x498.jpg")
+```
