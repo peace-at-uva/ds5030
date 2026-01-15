@@ -1,4 +1,21 @@
-This stores all of my files for DS5030: Understanding Uncertainty
-The folder, "working-files" stores base code and other files (e.g. datasets, images) needed to run the code.
-The folder, "hw-delivery" stores output for homework assignments.
-Other documents needed for class like the syllabus, readings, etc. are stored locally. 
+# DS5030 — Understanding Uncertainty
+
+This repository contains my coursework for **DS5030: Understanding Uncertainty**.
+
+## Repository Structure
+
+- **`working-files/`**  
+  Contains source files used to complete assignments, including:
+  - R Markdown files (`.Rmd`)
+  - Images
+  - Datasets and other supporting materials required to run the code
+
+- **`hw-delivery/`**  
+  Contains finalized homework outputs (e.g. rendered PDF submissions).
+
+## Notes
+
+Additional course materials such as the syllabus, readings, and personal notes are stored locally and are not included in this repository.
+
+---
+
