@@ -1,0 +1,91 @@
+---
+title: "Homework 01"
+author: "Peace Gwam"
+date: "2026-01-26"
+output: pdf_document
+knit: |
+  (function(inputFile, encoding) {
+    out_dir <- file.path(dirname(inputFile), "..", "hw-delivery")
+    if (!dir.exists(out_dir)) dir.create(out_dir, recursive = TRUE)
+    rmarkdown::render(inputFile, encoding = encoding, output_dir = out_dir)
+  })
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Question 1
+A random sample of lunch budgets for Charlottesville adults.
+```{r 1, echo = TRUE, fig.align='center'}
+budget <- c(12, 15, 20, 30, 10, 7, 10, 25, 18, 19, 28, 8)
+```
+
+## Part A
+```{r 1A, echo = TRUE, fig.align='center'}
+mean_budget <- mean(budget)
+print(mean_budget)
+```
+
+## Part B
+
+```{r fig1, echo=FALSE, fig.align='center', out.width='80%'}
+knitr::include_graphics("1b.png")
+```
+
+
+```{r 1A_2, echo = TRUE, fig.align='center'}
+variance_budget <- var(budget)
+print(variance_budget)
+```
+
+## Part C
+The mean should be five times the amount of the mean in Part A because we are assuming they are spending the same everyday.
+
+## Part D
+The variance should be 25 times the variance of the original sample.
+
+## Part E
+If you multiply the mean by a constant *c*, it should be the original mean times *c*.
+If you multiply the variance by *c*, it should be the original variance times *c* squared.
+
+## Part F
+The mean is the original mean plus 2. This is because the number of observations are the same so the calculation is essentially the same plus whatever the constant is. 
+
+## Part G
+The variance is the same because the distance of each observation from the mean is the same.
+
+## Part H
+If you add *c* to the mean, it will be the mean plus *c*.
+If you add *c* to the variance, the variance will not change. 
+
+# Question 2
+
+## Part A
+```{r fig2, echo=FALSE, fig.align='center', out.width='80%'}
+knitr::include_graphics("2a.png")
+```
+
+## Part B
+```{r fig2b, echo=FALSE, fig.align='center', out.width='80%'}
+knitr::include_graphics("2b.png")
+```
+## Part C
+```{r fig2c, echo=FALSE, fig.align='center', out.width='80%'}
+knitr::include_graphics("2c.png")
+```
+
+# Question 3
+
+## Part A
+According to https://www.statology.org/example-of-normal-distribution/, the birthweight of babies are normally distributed.
+
+## Part B
+According to https://www.statology.org/positively-skewed-distribution-examples/, individual income is right skewed. Most individuals make between $20,000 and $40,000 a year, but many make more. 
+
+## Part C
+Age of death is left skewed according to https://www.statology.org/negatively-skewed-distribution-examples/. People die when they are older. 
+
+## Part D
+I did my homework on my own. 
+
